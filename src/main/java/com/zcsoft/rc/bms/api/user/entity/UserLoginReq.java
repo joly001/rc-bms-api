@@ -3,20 +3,16 @@ package com.zcsoft.rc.bms.api.user.entity;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-import javax.validation.constraints.NotNull;
-
 public class UserLoginReq {
 
     /**
      * 用户名
      */
-    @NotNull
     @NotEmpty
     private String username;
     /**
      * 密码
      */
-    @NotNull
     @NotEmpty
     private String password;
 

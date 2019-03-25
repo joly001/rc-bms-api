@@ -1,6 +1,6 @@
 package com.zcsoft.rc.bms.api.user.entity;
 
-public class RoleAddRsp {
+public class RoleUpdateRsp {
 
     /**
      * id
@@ -17,7 +17,7 @@ public class RoleAddRsp {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("RoleAddRsp{");
+        final StringBuilder sb = new StringBuilder("RoleUpdateRsp{");
         sb.append("id='").append(id).append('\'');
         sb.append('}');
         return sb.toString();

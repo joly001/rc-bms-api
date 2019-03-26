@@ -2,6 +2,9 @@ package com.zcsoft.rc.bms.api.user.entity;
 
 public class RoleListReq {
 
+    /**
+     * 权限名称
+     */
     private String roleName;
 
     public String getRoleName() {

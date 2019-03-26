@@ -7,8 +7,9 @@ import java.util.List;
 public class RoleUpdateReq {
 
     /**
-     *
+     * id
      */
+    @NotEmpty
     private String id;
     /**
      * 角色名称

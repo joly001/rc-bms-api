@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class OrganizationUpdateReq {
 
     /**
-     *
+     * id
      */
     @NotEmpty
     private String id;

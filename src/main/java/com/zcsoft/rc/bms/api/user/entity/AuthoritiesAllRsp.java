@@ -17,7 +17,9 @@ public class AuthoritiesAllRsp {
      * 排序号
      */
     private java.lang.Integer sequenceNumber;
-
+    /**
+     * 子权限列表
+     */
     private List<AuthoritiesAllRsp> authorities;
 
     public String getId() {

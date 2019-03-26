@@ -25,7 +25,7 @@ public class UserAddReq {
     @NotEmpty
     private String builderUserType;
     /**
-     * 状态(00:入场、01:出厂)
+     * 状态(00:入场、01:出场)
      */
     @NotEmpty
     private String builderStatus;

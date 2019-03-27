@@ -30,10 +30,6 @@ public class MileageListRsp {
      * 结束位置纬度
      */
     private Double endLatitude;
-    /**
-     * 作业周期
-     */
-    private Integer workingCycle;
 
 
     public String getId() {
@@ -92,14 +88,6 @@ public class MileageListRsp {
         this.endLatitude = endLatitude;
     }
 
-    public Integer getWorkingCycle() {
-        return workingCycle;
-    }
-
-    public void setWorkingCycle(Integer workingCycle) {
-        this.workingCycle = workingCycle;
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("MileageListRsp{");
@@ -110,7 +98,6 @@ public class MileageListRsp {
         sb.append(", startLatitude=").append(startLatitude);
         sb.append(", endLongitude=").append(endLongitude);
         sb.append(", endLatitude=").append(endLatitude);
-        sb.append(", workingCycle=").append(workingCycle);
         sb.append('}');
         return sb.toString();
     }

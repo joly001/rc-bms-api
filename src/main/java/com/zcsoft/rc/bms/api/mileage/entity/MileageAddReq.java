@@ -36,11 +36,6 @@ public class MileageAddReq {
      */
     @NotNull
     private Double endLatitude;
-    /**
-     * 作业周期
-     */
-    @NotNull
-    private Integer workingCycle;
 
     public String getMileageName() {
         return mileageName;
@@ -90,14 +85,6 @@ public class MileageAddReq {
         this.endLatitude = endLatitude;
     }
 
-    public Integer getWorkingCycle() {
-        return workingCycle;
-    }
-
-    public void setWorkingCycle(Integer workingCycle) {
-        this.workingCycle = workingCycle;
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("MileageAddReq{");
@@ -107,7 +94,6 @@ public class MileageAddReq {
         sb.append(", startLatitude=").append(startLatitude);
         sb.append(", endLongitude=").append(endLongitude);
         sb.append(", endLatitude=").append(endLatitude);
-        sb.append(", workingCycle=").append(workingCycle);
         sb.append('}');
         return sb.toString();
     }

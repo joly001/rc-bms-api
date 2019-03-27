@@ -2,6 +2,8 @@ package com.zcsoft.rc.bms.api.mileage.entity;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.validation.constraints.NotNull;
+
 public class MileageSegmentUpdateReq {
 
     /**
@@ -27,7 +29,7 @@ public class MileageSegmentUpdateReq {
     /**
      * 作业周期
      */
-    @NotEmpty
+    @NotNull
     private Integer workingCycle;
 
     public String getId() {

@@ -17,6 +17,7 @@ public class UserAddReq {
     /**
      * 手机
      */
+    @NotEmpty
     @Pattern(regexp="^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$", message = "003003")
     private String mobile;
     /**

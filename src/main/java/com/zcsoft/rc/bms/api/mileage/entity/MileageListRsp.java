@@ -1,51 +1,40 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.NotNull;
-
-public class MileageUpdateReq {
+public class MileageListRsp {
 
     /**
      * id
      */
-    @NotEmpty
     private String id;
     /**
      * 里程点
      */
-    @NotEmpty
     private String mileageName;
     /**
      * 里程类型(00:百米标、01:公里标)
      */
-    @NotEmpty
     private String mileageType;
     /**
      * 开始位置经度
      */
-    @NotNull
     private Double startLongitude;
     /**
      * 开始位置纬度
      */
-    @NotNull
     private Double startLatitude;
     /**
      * 结束位置经度
      */
-    @NotNull
     private Double endLongitude;
     /**
      * 结束位置纬度
      */
-    @NotNull
     private Double endLatitude;
     /**
      * 作业周期
      */
-    @NotEmpty
     private Integer workingCycle;
+
 
     public String getId() {
         return id;
@@ -113,7 +102,7 @@ public class MileageUpdateReq {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("MileageUpdateReq{");
+        final StringBuilder sb = new StringBuilder("MileageListRsp{");
         sb.append("id='").append(id).append('\'');
         sb.append(", mileageName='").append(mileageName).append('\'');
         sb.append(", mileageType='").append(mileageType).append('\'');

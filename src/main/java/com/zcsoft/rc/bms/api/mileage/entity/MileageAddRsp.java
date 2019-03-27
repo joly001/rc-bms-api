@@ -2,6 +2,9 @@ package com.zcsoft.rc.bms.api.mileage.entity;
 
 public class MileageAddRsp {
 
+    /**
+     * id
+     */
     private String id;
 
     public String getId() {

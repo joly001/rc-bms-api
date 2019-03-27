@@ -39,7 +39,7 @@ public class MileageAddReq {
     /**
      * 作业周期
      */
-    @NotEmpty
+    @NotNull
     private Integer workingCycle;
 
     public String getMileageName() {

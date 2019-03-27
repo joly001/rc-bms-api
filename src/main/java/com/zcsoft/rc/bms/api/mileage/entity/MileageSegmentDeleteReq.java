@@ -1,6 +1,6 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
-public class MileageDeteleReq {
+public class MileageSegmentDeleteReq {
 
     /**
      * id
@@ -17,7 +17,7 @@ public class MileageDeteleReq {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("MileageDeteleReq{");
+        final StringBuilder sb = new StringBuilder("MileageSegmentDeleteReq{");
         sb.append("id='").append(id).append('\'');
         sb.append('}');
         return sb.toString();

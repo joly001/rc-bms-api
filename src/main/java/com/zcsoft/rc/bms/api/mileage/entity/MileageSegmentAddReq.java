@@ -1,22 +1,28 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class MileageSegmentAddReq {
 
     /**
      * 里程区间名称
      */
+    @NotEmpty
     private String mileageSegmentName;
     /**
      * 开始里程点
      */
+    @NotEmpty
     private String startMileageName;
     /**
      * 结束里程点
      */
+    @NotEmpty
     private String endMileageName;
     /**
      * 作业周期
      */
+    @NotEmpty
     private Integer workingCycle;
 
     public String getMileageSegmentName() {

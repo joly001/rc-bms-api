@@ -1,5 +1,6 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
@@ -118,6 +119,7 @@ public class WorkSegmentUpdateReq {
         return workDate;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd")
     public void setWorkDate(Date workDate) {
         this.workDate = workDate;
     }

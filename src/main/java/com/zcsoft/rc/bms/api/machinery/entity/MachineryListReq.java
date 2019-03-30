@@ -7,9 +7,9 @@ public class MachineryListReq {
      */
     private String wristStrapCode;
     /**
-     * 机械类型(SMALL:小型、MEDIUM:中型、LARGE:大型)
+     * 机械名称
      */
-    private String machineryType;
+    private String machineryName;
     /**
      * 司机
      */
@@ -23,12 +23,12 @@ public class MachineryListReq {
         this.wristStrapCode = wristStrapCode;
     }
 
-    public String getMachineryType() {
-        return machineryType;
+    public String getMachineryName() {
+        return machineryName;
     }
 
-    public void setMachineryType(String machineryType) {
-        this.machineryType = machineryType;
+    public void setMachineryName(String machineryName) {
+        this.machineryName = machineryName;
     }
 
     public String getNick() {
@@ -43,7 +43,7 @@ public class MachineryListReq {
     public String toString() {
         final StringBuilder sb = new StringBuilder("MachineryListReq{");
         sb.append("wristStrapCode='").append(wristStrapCode).append('\'');
-        sb.append(", machineryType='").append(machineryType).append('\'');
+        sb.append(", machineryName='").append(machineryName).append('\'');
         sb.append(", nick='").append(nick).append('\'');
         sb.append('}');
         return sb.toString();

@@ -13,7 +13,7 @@ public class UserUpdateReq {
      * id
      */
     @NotEmpty
-    public String id;
+    private String id;
     /**
      * 姓名
      */

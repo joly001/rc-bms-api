@@ -29,6 +29,22 @@ public class WorkSegmentListRsp {
      */
     private String endMileageName;
     /**
+     * 开始位置经度
+     */
+    private Double startLongitude;
+    /**
+     * 开始位置纬度
+     */
+    private Double startLatitude;
+    /**
+     * 结束位置经度
+     */
+    private Double endLongitude;
+    /**
+     * 结束位置纬度
+     */
+    private Double endLatitude;
+    /**
      * 作业类型(00:上行、01:下行)
      */
     private String workType;
@@ -93,6 +109,38 @@ public class WorkSegmentListRsp {
         this.endMileageName = endMileageName;
     }
 
+    public Double getStartLongitude() {
+        return startLongitude;
+    }
+
+    public void setStartLongitude(Double startLongitude) {
+        this.startLongitude = startLongitude;
+    }
+
+    public Double getStartLatitude() {
+        return startLatitude;
+    }
+
+    public void setStartLatitude(Double startLatitude) {
+        this.startLatitude = startLatitude;
+    }
+
+    public Double getEndLongitude() {
+        return endLongitude;
+    }
+
+    public void setEndLongitude(Double endLongitude) {
+        this.endLongitude = endLongitude;
+    }
+
+    public Double getEndLatitude() {
+        return endLatitude;
+    }
+
+    public void setEndLatitude(Double endLatitude) {
+        this.endLatitude = endLatitude;
+    }
+
     public String getWorkType() {
         return workType;
     }
@@ -134,6 +182,10 @@ public class WorkSegmentListRsp {
         sb.append(", mileageSegmentName='").append(mileageSegmentName).append('\'');
         sb.append(", startMileageName='").append(startMileageName).append('\'');
         sb.append(", endMileageName='").append(endMileageName).append('\'');
+        sb.append(", startLongitude=").append(startLongitude);
+        sb.append(", startLatitude=").append(startLatitude);
+        sb.append(", endLongitude=").append(endLongitude);
+        sb.append(", endLatitude=").append(endLatitude);
         sb.append(", workType='").append(workType).append('\'');
         sb.append(", workDate=").append(workDate);
         sb.append(", safetyProtectionPersonnel=").append(safetyProtectionPersonnel);

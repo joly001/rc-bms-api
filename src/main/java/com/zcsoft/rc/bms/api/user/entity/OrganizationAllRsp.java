@@ -14,6 +14,10 @@ public class OrganizationAllRsp {
      */
     private String orgName;
     /**
+     * 组织描述
+     */
+    private String orgDesc;
+    /**
      * 排序号
      */
     private Integer sequenceNumber;
@@ -37,6 +41,15 @@ public class OrganizationAllRsp {
     public void setOrgName(String orgName) {
         this.orgName = orgName;
     }
+
+    public String getOrgDesc() {
+        return orgDesc;
+    }
+
+    public void setOrgDesc(String orgDesc) {
+        this.orgDesc = orgDesc;
+    }
+
     public Integer getSequenceNumber() {
         return sequenceNumber;
     }
@@ -71,6 +84,7 @@ public class OrganizationAllRsp {
         final StringBuilder sb = new StringBuilder("OrganizationAllRsp{");
         sb.append("id='").append(id).append('\'');
         sb.append(", orgName='").append(orgName).append('\'');
+        sb.append(", orgDesc='").append(orgDesc).append('\'');
         sb.append(", sequenceNumber=").append(sequenceNumber);
         sb.append(", childOrgList=").append(childOrgList);
         sb.append('}');

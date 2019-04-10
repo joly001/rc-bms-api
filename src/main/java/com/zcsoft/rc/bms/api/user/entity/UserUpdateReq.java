@@ -42,7 +42,6 @@ public class UserUpdateReq {
     /**
      * 手环编码
      */
-    @NotEmpty
     private String wristStrapCode;
     /**
      * 组织id

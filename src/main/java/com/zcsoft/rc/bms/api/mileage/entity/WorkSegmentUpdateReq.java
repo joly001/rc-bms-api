@@ -1,10 +1,10 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.List;
 
 public class WorkSegmentUpdateReq {
 
@@ -58,6 +58,11 @@ public class WorkSegmentUpdateReq {
      */
     @NotNull
     private Integer workPersonnel;
+    /**
+     * 作业时间段
+     */
+    @NotNull
+    private List<WorkSegmentDateTimeReq> workDateTimeList;
 
     public String getId() {
         return id;
@@ -119,7 +124,6 @@ public class WorkSegmentUpdateReq {
         return workDate;
     }
 
-    @JsonFormat(pattern="yyyy-MM-dd")
     public void setWorkDate(Date workDate) {
         this.workDate = workDate;
     }
@@ -140,6 +144,14 @@ public class WorkSegmentUpdateReq {
         this.workPersonnel = workPersonnel;
     }
 
+    public List<WorkSegmentDateTimeReq> getWorkDateTimeList() {
+        return workDateTimeList;
+    }
+
+    public void setWorkDateTimeList(List<WorkSegmentDateTimeReq> workDateTimeList) {
+        this.workDateTimeList = workDateTimeList;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("WorkSegmentUpdateReq{");
@@ -153,6 +165,7 @@ public class WorkSegmentUpdateReq {
         sb.append(", workDate=").append(workDate);
         sb.append(", safetyProtectionPersonnel=").append(safetyProtectionPersonnel);
         sb.append(", workPersonnel=").append(workPersonnel);
+        sb.append(", workDateTimeList=").append(workDateTimeList);
         sb.append('}');
         return sb.toString();
     }

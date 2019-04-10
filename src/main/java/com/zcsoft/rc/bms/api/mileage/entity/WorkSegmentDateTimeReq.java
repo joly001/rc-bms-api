@@ -1,5 +1,7 @@
 package com.zcsoft.rc.bms.api.mileage.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class WorkSegmentDateTimeReq {
@@ -7,6 +9,7 @@ public class WorkSegmentDateTimeReq {
     /**
      * 开始作业时间
      */
+
     private Date startworkTime;
     /**
      * 结束作业时间
@@ -17,6 +20,7 @@ public class WorkSegmentDateTimeReq {
         return startworkTime;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     public void setStartworkTime(Date startworkTime) {
         this.startworkTime = startworkTime;
     }
@@ -25,6 +29,7 @@ public class WorkSegmentDateTimeReq {
         return endWorkTime;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     public void setEndWorkTime(Date endWorkTime) {
         this.endWorkTime = endWorkTime;
     }

@@ -28,10 +28,6 @@ public class RailwayLinesAddReq {
      * 上一站站点id
      */
     private String previousStationId;
-    /**
-     * 上一站站点名称
-     */
-    private String previousStationName;
 
     public String getRailwayLinesName() {
         return railwayLinesName;
@@ -73,14 +69,6 @@ public class RailwayLinesAddReq {
         this.previousStationId = previousStationId;
     }
 
-    public String getPreviousStationName() {
-        return previousStationName;
-    }
-
-    public void setPreviousStationName(String previousStationName) {
-        this.previousStationName = previousStationName;
-    }
-
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("RailwayLinesAddReq{");
@@ -89,7 +77,6 @@ public class RailwayLinesAddReq {
         sb.append(", startMileageName='").append(startMileageName).append('\'');
         sb.append(", endMileageName='").append(endMileageName).append('\'');
         sb.append(", previousStationId='").append(previousStationId).append('\'');
-        sb.append(", previousStationName='").append(previousStationName).append('\'');
         sb.append('}');
         return sb.toString();
     }

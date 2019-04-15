@@ -3,11 +3,11 @@ package com.zcsoft.rc.bms.api.warning.entity;
 public class TrainWarningListRsp {
 
     /**
-     *
+     * id
      */
     private String id;
     /**
-     * 昵称
+     * 司机
      */
     private String nick;
     /**

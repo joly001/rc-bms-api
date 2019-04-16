@@ -60,6 +60,14 @@ public class WorkSegmentListRsp {
      * 现场人员数
      */
     private Integer workPersonnel;
+    /**
+     * 提交人员名称
+     */
+    private String submitUserName;
+    /**
+     * 提交时间
+     */
+    private Date submitTime;
 
     public String getId() {
         return id;
@@ -173,6 +181,22 @@ public class WorkSegmentListRsp {
         this.workPersonnel = workPersonnel;
     }
 
+    public String getSubmitUserName() {
+        return submitUserName;
+    }
+
+    public void setSubmitUserName(String submitUserName) {
+        this.submitUserName = submitUserName;
+    }
+
+    public Date getSubmitTime() {
+        return submitTime;
+    }
+
+    public void setSubmitTime(Date submitTime) {
+        this.submitTime = submitTime;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("WorkSegmentListRsp{");
@@ -190,6 +214,8 @@ public class WorkSegmentListRsp {
         sb.append(", workDate=").append(workDate);
         sb.append(", safetyProtectionPersonnel=").append(safetyProtectionPersonnel);
         sb.append(", workPersonnel=").append(workPersonnel);
+        sb.append(", submitUserName='").append(submitUserName).append('\'');
+        sb.append(", submitTime=").append(submitTime);
         sb.append('}');
         return sb.toString();
     }

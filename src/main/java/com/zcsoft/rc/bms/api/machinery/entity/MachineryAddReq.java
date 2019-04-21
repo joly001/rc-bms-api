@@ -2,6 +2,8 @@ package com.zcsoft.rc.bms.api.machinery.entity;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import javax.validation.constraints.Pattern;
+
 public class MachineryAddReq {
 
     /**
@@ -33,6 +35,7 @@ public class MachineryAddReq {
      * 手机
      */
     @NotEmpty
+    @Pattern(regexp="^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$", message = "003003")
     private String mobile;
     /**
      * 作业半径

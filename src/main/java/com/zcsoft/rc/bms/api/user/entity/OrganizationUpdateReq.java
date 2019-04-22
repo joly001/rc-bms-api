@@ -1,5 +1,6 @@
 package com.zcsoft.rc.bms.api.user.entity;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class OrganizationUpdateReq {
@@ -13,10 +14,12 @@ public class OrganizationUpdateReq {
      * 组织名称
      */
     @NotEmpty
+    @Length(max = 50)
     private String orgName;
     /**
      * 组织描述
      */
+    @Length(max = 200)
     private String orgDesc;
     /**
      * 排序号

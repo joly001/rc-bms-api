@@ -36,6 +36,10 @@ public class UserListRsp {
      * 手环编码
      */
     private String wristStrapCode;
+    /**
+     * 组织id
+     */
+    private String organizationId;
 
     public String getId() {
         return id;
@@ -101,6 +105,14 @@ public class UserListRsp {
         this.wristStrapCode = wristStrapCode;
     }
 
+    public String getOrganizationId() {
+        return organizationId;
+    }
+
+    public void setOrganizationId(String organizationId) {
+        this.organizationId = organizationId;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserListRsp{");
@@ -112,6 +124,7 @@ public class UserListRsp {
         sb.append(", admissionDate=").append(admissionDate);
         sb.append(", leaveDate=").append(leaveDate);
         sb.append(", wristStrapCode='").append(wristStrapCode).append('\'');
+        sb.append(", organizationId='").append(organizationId).append('\'');
         sb.append('}');
         return sb.toString();
     }

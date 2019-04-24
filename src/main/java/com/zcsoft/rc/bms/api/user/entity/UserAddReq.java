@@ -1,6 +1,7 @@
 package com.zcsoft.rc.bms.api.user.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.validation.constraints.NotNull;
@@ -13,6 +14,7 @@ public class UserAddReq {
      * 姓名
      */
     @NotEmpty
+    @Length(max = 10)
     private String nick;
     /**
      * 手机

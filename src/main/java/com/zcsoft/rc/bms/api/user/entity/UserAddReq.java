@@ -46,6 +46,10 @@ public class UserAddReq {
      */
     @NotEmpty
     private String organizationId;
+    /**
+     * 角色id
+     */
+    private String roleId;
 
     public String getNick() {
         return nick;
@@ -104,6 +108,14 @@ public class UserAddReq {
         this.organizationId = organizationId;
     }
 
+    public String getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserAddReq{");
@@ -114,6 +126,7 @@ public class UserAddReq {
         sb.append(", admissionLeaveDate=").append(admissionLeaveDate);
         sb.append(", wristStrapCode='").append(wristStrapCode).append('\'');
         sb.append(", organizationId='").append(organizationId).append('\'');
+        sb.append(", roleId='").append(roleId).append('\'');
         sb.append('}');
         return sb.toString();
     }

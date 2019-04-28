@@ -1,46 +1,37 @@
 package com.zcsoft.rc.bms.api.user.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import java.util.Date;
 
-public class UserUpdateReq {
+public class UserDetailsRsp {
 
     /**
      * id
      */
-    @NotEmpty
-    private String id;
+    public String id;
     /**
      * 姓名
      */
-    @Length(max = 10)
     private String nick;
     /**
      * 手机
      */
-    @NotEmpty
-    @Pattern(regexp="^[1](([3][0-9])|([4][5,7,9])|([5][^4,6,9])|([6][6])|([7][3,5,6,7,8])|([8][0-9])|([9][8,9]))[0-9]{8}$", message = "003003")
     private String mobile;
     /**
      * 角色(00:机车、01:列车、02:施工人员、03:安全防护员、04:作业负责人、05:监理、06:其它人员)
      */
-    @NotEmpty
     private String builderUserType;
     /**
      * 状态(00:入场、01:出场)
      */
-    @NotEmpty
     private String builderStatus;
     /**
-     * 入场/离场时间
+     * 入场时间
      */
-    @NotNull
-    private Date admissionLeaveDate;
+    private Date admissionDate;
+    /**
+     * 离场时间
+     */
+    private Date leaveDate;
     /**
      * 手环编码
      */
@@ -48,7 +39,6 @@ public class UserUpdateReq {
     /**
      * 组织id
      */
-    @NotEmpty
     private String organizationId;
     /**
      * 角色id
@@ -95,13 +85,20 @@ public class UserUpdateReq {
         this.builderStatus = builderStatus;
     }
 
-    public Date getAdmissionLeaveDate() {
-        return admissionLeaveDate;
+    public Date getAdmissionDate() {
+        return admissionDate;
     }
 
-    @JsonFormat(pattern="yyyy-MM-dd")
-    public void setAdmissionLeaveDate(Date admissionLeaveDate) {
-        this.admissionLeaveDate = admissionLeaveDate;
+    public void setAdmissionDate(Date admissionDate) {
+        this.admissionDate = admissionDate;
+    }
+
+    public Date getLeaveDate() {
+        return leaveDate;
+    }
+
+    public void setLeaveDate(Date leaveDate) {
+        this.leaveDate = leaveDate;
     }
 
     public String getWristStrapCode() {
@@ -130,13 +127,14 @@ public class UserUpdateReq {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("UserUpdateReq{");
+        final StringBuilder sb = new StringBuilder("UserDetailsRsp{");
         sb.append("id='").append(id).append('\'');
         sb.append(", nick='").append(nick).append('\'');
         sb.append(", mobile='").append(mobile).append('\'');
         sb.append(", builderUserType='").append(builderUserType).append('\'');
         sb.append(", builderStatus='").append(builderStatus).append('\'');
-        sb.append(", admissionLeaveDate=").append(admissionLeaveDate);
+        sb.append(", admissionDate=").append(admissionDate);
+        sb.append(", leaveDate=").append(leaveDate);
         sb.append(", wristStrapCode='").append(wristStrapCode).append('\'');
         sb.append(", organizationId='").append(organizationId).append('\'');
         sb.append(", roleId='").append(roleId).append('\'');

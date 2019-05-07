@@ -44,6 +44,10 @@ public class UserDetailsRsp {
      * 角色id
      */
     private String roleId;
+    /**
+     * 角色名称
+     */
+    private String roleName;
 
     public String getId() {
         return id;
@@ -125,6 +129,14 @@ public class UserDetailsRsp {
         this.roleId = roleId;
     }
 
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("UserDetailsRsp{");
@@ -138,6 +150,7 @@ public class UserDetailsRsp {
         sb.append(", wristStrapCode='").append(wristStrapCode).append('\'');
         sb.append(", organizationId='").append(organizationId).append('\'');
         sb.append(", roleId='").append(roleId).append('\'');
+        sb.append(", roleName='").append(roleName).append('\'');
         sb.append('}');
         return sb.toString();
     }

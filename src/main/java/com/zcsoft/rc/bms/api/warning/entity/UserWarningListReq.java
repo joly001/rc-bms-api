@@ -7,7 +7,7 @@ public class UserWarningListReq {
      */
     private String id;
     /**
-     *
+     * 类型
      */
     private String type;
 

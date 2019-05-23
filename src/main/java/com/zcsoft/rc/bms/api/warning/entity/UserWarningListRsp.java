@@ -13,7 +13,7 @@ public class UserWarningListRsp {
      */
     private String depName;
     /**
-     * 组织名称
+     * 角色
      */
     private String roleName;
     /**
